@@ -170,10 +170,7 @@ def download_media():
 
     for i in range(len(MEDIAS)):
         if name == MEDIAS[i].name:
-            link = MEDIAS[i].url
-            first_stream = pytube.YouTube(link).streams.first()
-            first_stream.download(output_path='./' , filename='test.mp4')
-        
+            MEDIAS[i].download()
     if f == 0:
         print('This media not exist!!!') 
 
